@@ -1,0 +1,123 @@
+.protucts__title {
+    text-align: center;
+    margin: 10px 0 0 0px;
+}
+
+.filter__list{
+    @include centeredFlex();
+    @extend %list;
+
+    justify-content: center;
+    margin: 10px auto 0;
+    flex-wrap: wrap;
+    max-width: 80%;
+}
+
+.filter__item {
+    margin-bottom: 10px;
+
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 0;
+    }
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.button__checkbox {
+    z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+
+.button__lable {
+    display: inline-block;
+	cursor: pointer;
+    
+    text-align: center;
+    padding: 6px 12px;
+
+
+    color: $color-main-text;
+    background-color: $color-main-body;
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0), 0px 1px 2px rgba(0, 0, 0, 0), 0px 2px 2px rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    border: 1px solid $color-main-text;
+
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+
+    .button__checkbox:checked + &,
+    &:focus,
+    &:hover {
+        color: $color-main-body;
+        background-color: $color-main-text;
+        box-shadow: 0px 3px 1px rgba(0, 204, 255, 0.1), 0px 1px 2px rgba(0, 204, 255, 0.08), 0px 2px 2px rgba(0, 204, 255, 0.12);
+    }
+
+    .button__checkbox:checked + &{
+        color: #00ccff;
+    }
+}
+
+
+
+
+
+.cards{
+    @extend %list;
+    margin: 20px 0;
+
+    @media screen and (min-width: $tablet) {
+        @include centeredFlex();
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+}
+
+.cards__item{
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $tablet) {
+        margin: 20px 20px 0;
+        flex-basis: calc((100% - 4 * 20px) / 2);
+    };
+
+    @media screen and (min-width: $desktop) {
+        margin: 20px 20px 0;
+        flex-basis: calc((100% - 6 * 20px) / 3);
+    };
+    transform: scale(1);
+    transition: transform 250ms ease-in-out;
+
+    &:focus,
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+
+
+.card__link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.card__image {
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.cards__leble{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: $color-main-body;
+    opacity: 0.7;
+    margin-top: -1.5em;
+}

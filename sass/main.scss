@@ -1,0 +1,26 @@
+@import './base/normalized';
+
+@import './utils/colors';
+@import './utils/breakpoints';
+@import './utils/general';
+@import './utils/placeholders';
+@import './utils/mixins';
+@import './utils/fading';
+@import './utils/is-hidden';
+
+@import './components/container';
+@import './components/button';
+@import './components/burger';
+@import './components/logo';
+
+@import './components/page-header';
+@import './components/navigation';
+
+@import './components/hero';
+
+@import './components/page-main';
+
+@import './components/page-footer';
+
+@import './components/modal';
+

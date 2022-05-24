@@ -1,0 +1,32 @@
+.fading span {
+    animation: fading 2500ms alternate infinite;
+    opacity: 0;
+}
+
+@keyframes fading {
+    0% {
+        opacity: 0;
+        filter: blur(3px);
+    }
+    50%, 100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+
+.fading2 span {
+    animation: fading 2500ms alternate infinite;
+    opacity: 0;
+}
+
+@keyframes fading2 {
+    0% {
+        opacity: 0.5;
+        filter: blur(3px);
+    }
+    50%, 100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}

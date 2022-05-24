@@ -1,0 +1,60 @@
+.hero {
+    @include centeredFlex();
+
+    margin: 0 auto;
+    flex-direction: column;
+
+    background-color: #04111a;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/Background_on_Dreams_and_the_Mind.webp);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+
+    height: 300px;
+
+
+
+    @media screen and (max-width: 720px) {
+        background-size: cover;
+    };
+
+    @media screen and (min-width: 950px) {
+        height: 400px;
+        background-size: cover;
+    };
+
+
+    @media screen and (min-width: 1200px) {
+        height: 500px;
+        background-size: contain;
+    };
+
+
+
+}
+
+
+
+.hero__title {
+    color: $color-main-body;
+    width: 50%;
+
+    @media screen and (min-width: $tablet) {
+        margin-left: 50px;
+        width: 30%;
+    }
+    @media screen and (min-width: $desktop) {
+
+    }
+}
+.hero__button {
+    @extend %btn;
+    @media screen and (min-width: $tablet) {
+        margin-left: 50px;
+    }
+
+    &:hover, &:active {
+        background-color: #ffcc00;
+        color: $color-main-text;
+    }
+}
